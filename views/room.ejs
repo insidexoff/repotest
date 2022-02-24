@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hoblox</title>
+    <link rel="stylesheet" href="../style.css" />
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="https://kit.fontawesome.com/c939d0e917.js"></script>
+    <script src="https://unpkg.com/peerjs"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.0.0/dist/tf.min.js"></script>
+    <script>
+        const ROOM_ID = "<%= roomId %>";
+    </script>
+</head>
+
+<body>
+    <div class="header">
+        <div class="logo">
+            <div class="header__back">
+                <i class="fas fa-angle-left"></i>
+            </div>
+            <h3 class="withbold">Hoblox <i class="bi-alarm"></i></h2>
+        </div>
+    </div>
+    <div class="main">
+        <div class="main__left">
+            <div class="videos__group">
+                <div id="video-grid">
+
+                </div>
+            </div>
+            <center>
+                <div class="options">
+                    <div class="options__left">
+                        <div id="stopVideo" class="options__button">
+                            <i class="bi bi-camera-video-fill"></i>
+                        </div>
+                        <div id="muteButton" class="options__button">
+                            <i class="bi bi-mic-fill"></i>
+                        </div>
+                        <div id="showChat" class="options__button">
+                            <i class="bi bi-chat-text-fill"></i>
+                        </div>
+                    </div>
+                    <div class="options__right">
+                        <div id="inviteButton" class="options__button">
+                            <i class="bi bi-person-plus-fill"></i>
+                        </div>
+                    </div>
+                </div>
+            </center>
+        </div>
+        <div class="main__right">
+            <div class="main__chat_window">
+                <div class="messages">
+
+                </div>
+            </div>
+            <div class="main__message_container">
+                <input id="chat_message" type="text" autocomplete="off" placeholder="Type message here...">
+                <div id="send" class="options__button">
+                    <i class="bi bi-send-fill"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="../script.js"></script>
+
+</html>
